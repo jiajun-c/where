@@ -23,7 +23,7 @@ type Place struct {
 	Province string
 	City     string
 	Area     string
-	level    string
+	Level    string
 }
 
 var (
@@ -39,7 +39,7 @@ func IsProvince(req string) ([]Place, error) {
 			Province: req,
 			City:     "",
 			Area:     "",
-			level:    LevelProvince,
+			Level:    LevelProvince,
 		})
 		return ans, nil
 	}
@@ -49,7 +49,7 @@ func IsProvince(req string) ([]Place, error) {
 			Province: AddProv,
 			City:     "",
 			Area:     "",
-			level:    LevelProvince,
+			Level:    LevelProvince,
 		})
 		return ans, nil
 	}
@@ -63,7 +63,7 @@ func IsCity(req string) ([]Place, error) {
 			Province: prov,
 			City:     req,
 			Area:     "",
-			level:    LevelCity,
+			Level:    LevelCity,
 		})
 		return ans, nil
 	}
@@ -73,7 +73,7 @@ func IsCity(req string) ([]Place, error) {
 			Province: prov,
 			City:     AddCity,
 			Area:     "",
-			level:    LevelCity,
+			Level:    LevelCity,
 		})
 		return ans, nil
 	}
@@ -88,7 +88,7 @@ func IsArea(req string) ([]Place, error) {
 				Province: cityMap[c],
 				City:     c,
 				Area:     req,
-				level:    LevelArea,
+				Level:    LevelArea,
 			})
 		}
 		return ans, nil
@@ -100,7 +100,7 @@ func IsArea(req string) ([]Place, error) {
 				Province: cityMap[c],
 				City:     c,
 				Area:     AddArea,
-				level:    LevelArea,
+				Level:    LevelArea,
 			})
 		}
 		return ans, nil
