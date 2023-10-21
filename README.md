@@ -4,7 +4,7 @@
 ## Install 
 
 ```shell
-go get go get -u github.com/jiajun-c/where@v0.0.2
+go get -u github.com/jiajun-c/where@v0.0.3
 ```
 
 ## Usage
