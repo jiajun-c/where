@@ -75,6 +75,7 @@ func IsCity(req string) ([]Place, error) {
 			Area:     "",
 			level:    LevelCity,
 		})
+		return ans, nil
 	}
 	return nil, errors.New("no place")
 }
