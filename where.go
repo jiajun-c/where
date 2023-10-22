@@ -9,12 +9,6 @@ var data = "{\"北京市\":{\"市辖区\":[\"东城区\",\"西城区\",\"朝阳�
 
 func init() {
 	m := map[string]interface{}{}
-	//jsonFile, err := os.Open("./data/area.json")
-	//if err != nil {
-	//	log.Fatal(err)
-	//}
-	//defer jsonFile.Close()
-	//byteValue, _ := io.ReadAll(jsonFile)
 	json.Unmarshal([]byte(data), &m)
 	parseProvince(m)
 }
